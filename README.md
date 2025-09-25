@@ -70,7 +70,7 @@ If you want to use a custom domain:
 3. Watch the workflow run and complete successfully
 4. Your site will be available at your custom domain or at `https://yourusername.github.io/repository-name`
 
-**Why GitHub Actions?** Your repository includes a workflow file (`.github/workflows/ci.yml`) that automatically builds your Eleventy site, compiles Tailwind CSS, and deploys everything to GitHub Pages. Using "GitHub Actions" as the source lets this automated process work seamlessly.
+**Why GitHub Actions source?** Your workflow uses `peaceiris/actions-gh-pages@v4` which pushes to a `gh-pages` branch. By selecting "GitHub Actions" as the source, GitHub Pages will automatically deploy whatever your workflow publishes. This automated process handles building your Eleventy site, compiling Tailwind CSS, and deploying everything seamlessly.
 
 ## Google Fonts & Typography
 
