@@ -30,6 +30,48 @@ A starter template for static sites using Eleventy, Tailwind CSS, and GitHub Pag
 6. **Deploy**
    - Push to GitHub. GitHub Actions will build and deploy to GitHub Pages automatically.
 
+## GitHub Pages Configuration
+
+After pushing your code to GitHub, follow these steps to configure GitHub Pages deployment:
+
+### Step 1: Access Repository Settings
+
+1. Navigate to your repository on GitHub
+2. Click on the **Settings** tab (located at the top of the repository page)
+3. Scroll down to find the **Pages** section in the left sidebar
+
+### Step 2: Configure Pages Source
+
+1. In the **Pages** section, look for the **Source** dropdown
+2. Select **GitHub Actions** from the dropdown menu
+   - **Important**: Do NOT select "Deploy from a branch"
+   - GitHub Actions allows your workflow file to handle the entire build and deployment process
+3. Leave all other settings as default
+
+### Step 3: Set Up Custom Domain (Optional)
+
+If you want to use a custom domain:
+
+1. In the same **Pages** section, find the **Custom domain** field
+2. Enter your domain name (e.g., `example.com` or `www.example.com`)
+3. Click **Save**
+4. GitHub will automatically create or update your `CNAME` file
+5. Make sure your DNS settings are configured correctly (see DNS setup in the main Setup section above)
+
+### Step 4: Enable HTTPS
+
+1. Check the **Enforce HTTPS** checkbox (highly recommended for security)
+2. This option may take a few minutes to become available after setting up your domain
+
+### Step 5: Verify Deployment
+
+1. Push any changes to your `main` branch
+2. Go to the **Actions** tab in your repository
+3. Watch the workflow run and complete successfully
+4. Your site will be available at your custom domain or at `https://yourusername.github.io/repository-name`
+
+**Why GitHub Actions?** Your repository includes a workflow file (`.github/workflows/ci.yml`) that automatically builds your Eleventy site, compiles Tailwind CSS, and deploys everything to GitHub Pages. Using "GitHub Actions" as the source lets this automated process work seamlessly.
+
 ## Google Fonts & Typography
 
 ### Rubik Font
